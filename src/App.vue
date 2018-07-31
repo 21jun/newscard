@@ -55,7 +55,11 @@
           }
         }).then((result) => {
           //console.log(result.data.items[50]);
+
           let news = result.data.items;
+
+          console.log(news)
+
           for (let i in news) {
             var tmp = {
               title: cleanStr(news[i].title, "title"),
@@ -64,9 +68,11 @@
             this.tophun.push(tmp);
           }
           for (let i = 0; i < 10; i++) {
+            console.log(news[i])
             var tmp = {
               title: cleanStr(news[i].title, "title"),
-              link: (news[i].originallink)
+              link: (news[i].originallink),
+              desc: cleanStr(news[i].description,"title")
             };
             this.topten.push(tmp);
           }

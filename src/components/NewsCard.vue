@@ -34,7 +34,7 @@
           </v-card-media>
           <v-card-title>
             <div>
-              <span class="grey--text"></span><br>
+              <span class="grey--text">{{props.item.desc}}</span><br>
             </div>
           </v-card-title>
         </v-card>
